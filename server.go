@@ -6,9 +6,14 @@ import (
 	"net/http"
 )
 
+var (
+	listen = flag.String("listen", ":8080", "listen address")
+	dir    = flag.String("dir", ".", "directory to serve")
+)
+
 func main() {
-	addr := flag.String("a", ":5555", "address:port")
 	flag.Parse()
-	log.Println("listening on %q\n", *addr)
-	log.Fatal(http.ListenAndServe(*addr, http.FileServer(http.Dir("."))))
+	log.Printf("listening on %q...", *listen)
+	err := http.ListenAndServe(*listen, http.FileServer(http.Dir(*dir)))
+	log.Fatalln(err)
 }
