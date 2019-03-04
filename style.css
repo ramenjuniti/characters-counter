@@ -1,0 +1,38 @@
+h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#textArea {
+  margin-bottom: 2em;
+  border-radius: 10px;
+}
+
+#button {
+  width: 100px;
+  height: 40px;
+  color: white;
+  background-color: #52C31B;
+  border: none;
+  border-radius: 10px;
+  outline-color: gray;
+}
+
+#resultContainer {
+  text-align: center;
+}
+
+#resultLabel {
+  margin:1.5em 0 0.5em;
+}
+
+#result {
+  margin: 0;
+  font-size: 2em;
+}

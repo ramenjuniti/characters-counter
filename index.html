@@ -2,6 +2,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Character Counter by Go wasm</title>
+    <link rel="stylesheet" href="style.css" />
     <script src="wasm_exec.js"></script>
     <script>
       const go = new Go();
@@ -14,12 +15,14 @@
     </script>
   </head>
   <body>
+    <h1>Character Counter</h1>
     <form action="" id="countForm">
-      <input type="text" id="textArea" />
-      <input type="submit" value="Count!!" />
+      <textarea name="text" id="textArea" cols="50" rows="10"></textarea>
+      <input type="submit" value="Count" id="button"/>
     </form>
     <div id="resultContainer">
-      <p id="result"></p>
+			<p id="resultLabel"></p>
+			<p id="result"></p>
     </div>
   </body>
 </html>
